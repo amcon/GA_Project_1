@@ -33,7 +33,7 @@
 
 #longFloor {
     background-color: black;
-    height: 80px;
+    height: 35%;
     width: 160px;
     bottom: 0;
     float: left;
@@ -42,33 +42,65 @@
     font-size: .8em;
 }
 
+#longFloorWall {
+  background-color: red;
+    height: 35%;
+    width: 1px;
+    bottom: 0;
+    float: left;
+}
+
 #floor {
     background-color: black;
-    height: 80px;
+    height: 35%;
     width: 130px;
+    bottom: 0px;
+    float: left;
+}
+
+#floorWall {
+    background-color: red;
+    height: 35%;
+    width: 1px;
     bottom: 0px;
     float: left;
 }
 
 #shortFloor {
     background-color: black;
-    height: 80px;
+    height: 35%;
     width: 90px;
+    bottom: 0px;
+    float: left;
+}
+
+#shortFloorWall {
+    background-color: red;
+    height: 35%;
+    width: 1px;
     bottom: 0px;
     float: left;
 }
 
 #shortFloor3 {
     background-color: black;
-    height: 80px;
+    height: 35%;
     width: 60px;
+    bottom: 0px;
+    float: left;
+}
+
+#shortFloor3Wall {
+    background-color: red;
+    height: 35%;
+    width: 1px;
     bottom: 0px;
     float: left;
 }
 
 #hole {
     background-color: red;
-    height: 40px;
+    height: 15%;
     width: 50px;
     bottom: 0px;
     float: left;
@@ -76,7 +108,7 @@
 
 #longHole {
     background-color: red;
-    height: 40px;
+    height: 15%;
     width: 100px;
     bottom: 0px;
     float: left;
@@ -84,15 +116,23 @@
 
 #pillar1 {
     background-color: darkgrey;
-    height: 120px;
+    height: 50%;
     width: 50px;
+    bottom: 0px;
+    float: left;
+}
+
+#pillar1Wall {
+    background-color: red;
+    height: 50%;
+    width: 1px;
     bottom: 0px;
     float: left;
 }
 
 #longPillar1 {
     background-color: darkgrey;
-    height: 120px;
+    height: 50%;
     width: 130px;
     bottom: 0px;
     float: left;
@@ -101,25 +141,49 @@
     color: white;
 }
 
+#longPillar1Wall {
+    background-color: red;
+    height: 50%;
+    width: 1px;
+    bottom: 0px;
+    float: left;
+}
+
 #pillar2 {
     background-color: grey;
-    height: 160px;
+    height: 65%;
     width: 65px;
+    bottom: 0px;
+    float: left;
+}
+
+#pillar2Wall {
+    background-color: red;
+    height: 65%;
+    width: 1px;
     bottom: 0px;
     float: left;
 }
 
 #pillar3 {
     background-color: lightgrey;
-    height: 210px;
+    height: 80%;
     width: 45px;
+    bottom: 0px;
+    float: left;
+}
+
+#pillar3Wall {
+    background-color: red;
+    height: 80%;
+    width: 1px;
     bottom: 0px;
     float: left;
 }
 
 #winZone {
     background-color: green;
-    height: 80px;
+    height: 30%;
     width: 101px;
     bottom: 0px;
     float: left;
@@ -148,7 +212,17 @@ h3 {
     height: 20px;
     width: 20px;
     background-color: blue;
-    top: 20%;
+    top: 17.8%;
     left: 1%;
     z-index: 1;
+}
+
+button {
+  display: block;
+  width: 100%;
+  height: 10vh;
+  background-color: blue;
+  text-align: center;
+  font-size: 2.5em;
+  font-family: Helvetica;
 }
