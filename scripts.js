@@ -5,8 +5,13 @@ $(function(){
 var $player = $("#player");
 var $screen = $("#screen");
 var xAxis = 5;
+var yAxis = 5;
 
 var $wall = $(".wall");
+
+var interval = null;
+var interval2 = null;
+
 
 //----------------------------------------------------------------------//
 
@@ -21,18 +26,22 @@ var $wall = $(".wall");
           xAxis = -xAxis;
           }
 
-          pxValue = xPosition + xAxis + "px";
+          var pxValue = xPosition + xAxis + "px";
           $player.css("left", pxValue);
       //  console.log(xPosition);
 
-}
+          }
 //------------------------------------------------------------------------//
 
 //  create a function for the player to always be falling -- unless he is hitting the y-axis of a div top
 
-//          function fall(){
+         function fall(){
 
-//          }
+              var yPosition = parseInt($player.css("top"));
+
+              var pxValue = yPosition + yAxis + "px";
+              $player.css("top", pxValue);
+         }
 
 
 //----------------------------------------------------------------------//
@@ -76,10 +85,10 @@ var $wall = $(".wall");
 
 //  create a funtion that jumps when you hit the spacebar
 
-          // function jump(){
+          function jump(){
+                  $player.animate({top: 80}, 400);
+                      };
 
-
-          //}
 
 //----------------------------------------------------------------------//
 
@@ -97,9 +106,22 @@ var intMove = setInterval(function() {
     movePlayer();
     }, 40);
 
-var intId = setInterval(function() {
-    hitWall();
-    }, 40);
+// var intId = setInterval(function() {
+//     hitWall();
+//     }, 40);
+
+$(document).keydown(function(e){
+    switch (e.which) {
+    case 38: // up
+        jump();
+        break;
+    }
+   })
+
+setInterval(function(){
+  fall();
+}, 40);
+
 
 
 })
