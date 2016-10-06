@@ -1,50 +1,30 @@
 $(function(){
 
-function run() {
-// Create variables for objects I want to manipulate
-var screen = $('body');
-var player = $('#player');
+var $player = $("#player");
+var $screen = $("#screen");
+var xAxis = 5;
 
-// Use parseInt to get values to be more consistent
-var screen_width = parseInt(screen.width());
-var speed = 20;
+//create a function for the player to move left and right when page loads and changes direction based on the screen width
 
-// Function for my runner moving left to right in my screen
-    setInterval(function() {
-    var playerRight = parseInt(player.css('left'));
-    if (playerRight > (screen_width - 20)) {
-      playerRight();
-      }
-// Make the player's position move from left to right at the set speed
-    player.css('left', playerRight + speed);
+function movePlayer(){
 
-  }, 40);
+  var xPosition = parseInt($player.css("left"));
+
+   if (xPosition > 1214 || xPosition < 12){
+   xAxis = -xAxis;
+  }
+
+  pxValue = xPosition + xAxis + "px";
+  $player.css("left", pxValue);
+  console.log(xPosition);
+
 }
 
-function collide() {
-      var player = $('#player');
-      var wall = $()
-}
+//create a function that ends the game when the player hits certain divs
 
-$(document).ready(function(){
-  run();
-})
+
+setInterval(function() {
+ movePlayer();
+ }, 40);
 
 })
-
-
-// $(function(){
-
-//     function moveLeftRight() {
-
-//       var player = $('#player');
-
-//       var playerCurrent = player.animate({left: '1219px'}, 4000);
-
-//     }
-
-//     $(document).ready(function(){
-//     moveLeftRight();
-// })
-
-// })
