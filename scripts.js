@@ -32,8 +32,9 @@ var falling = true;
 
           var xPosition = parseInt($player.css("left"));
           var screenWidth = parseInt($screen.width());
+          var playerWidth = parseInt($player.width());
 
-          if (xPosition > (screenWidth - 20) || xPosition < (screenWidth - screenWidth)){
+          if (xPosition > (screenWidth - playerWidth) || xPosition < (screenWidth - screenWidth)){
           xAxis = -xAxis;
           }
 
@@ -52,6 +53,8 @@ var falling = true;
               var yPosition = parseInt($player.css("top"));
 
               var container1Height = parseInt($container1.height());
+              var playerHeight = parseInt($player.height());
+              var playerWidth = parseInt($player.width());
               var floorHeight = parseInt($floor.height());
               var floorWidth = parseInt($floor.width());
               var holeHeight = parseInt($hole.height());
@@ -62,31 +65,34 @@ var falling = true;
 
               // if he falls into a div floor top, quit the fall funtion, but move forward
               // else, keep falling
-              if (xPosition >= (floorWidth - 20)) {
-                    var falling = true;
-                    if (yPosition >= 125) {
+              if (0 < xPosition <= (floorWidth - playerWidth)) {
+                    yAxis = 1;
+                    if (yPosition >= container1Height - (floorHeight + playerHeight)) {
                           // clearInterval(intFall);
                           yAxis = 0;
-                          var falling = false;
-                          }
-                    }
+                          // var falling = false;
+                          } else if (yPosition < container1Height - (floorHeight + playerHeight)) {
+                            yAxis = 1;
+                          } else {
+                            yAxis = 1;
+                          };
+              } else if (floorWidth < xPosition >= (floorWidth + (holeWidth - playerWidth))) {
+                    yAxis = 1;
+                    if (yPosition >= container1Height - (holeHeight + playerHeight));
+                          yAxis = 0;
+                          // clearInterval(intMove);
+                          // alert("You LOSE!");
+                          } else {
+                            yAxis = 1;
+                          };
 
-               // if he falls into a hole top, you lose
-               // if (xPosition >= holeWidth) {
-               //      if (yPosition >= container1Height - holeHeight);
-               //      clearInterval(intFall);
-               //      clearInterval(inMove);
-               //      alert("You LOSE!");
-               // }
 
-              //else if (yPosition < container1Height - floorHeight) - 25) && (yPosition < ((container1Height - pillar1Height) - 25)) {
-              //   setInterval(intFall);
-              // }
 
               var pxValue = yPosition + yAxis + "px";
               $player.css("top", pxValue);
               console.log(yPosition);
           }
+
 
 
 //----------------------------------------------------------------------//
@@ -173,6 +179,7 @@ $(document).keydown(function(e){
 var intFall = setInterval(function(){
   fall();
 }, 25);
+
 
 
 
