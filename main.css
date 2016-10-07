@@ -1,39 +1,47 @@
-#screen {
+body {
     position: absolute;
-    height: 98vh;
+    height: 700px;
     width: 1229px;
     margin: 0 auto;
     background-color: black;
 }
 
-#container1 {
+/*.screen {
+    position: absolute;
+    height: 98vh;
+    width: 1229px;
+    margin: 0 auto;
+    background-color: black;
+}*/
+
+.container1 {
     display: flex;
     align-items: flex-end;
-    height: 32%;
-    width: 100%;
+    height: 224px;
+    width: 1239px;
     background-color: lightblue;
 }
 
-#container2 {
+.container2 {
     display: flex;
     align-items: flex-end;
     flex-direction: row-reverse;
-    height: 28%;
-    width: 100%;
+    height: 196px;
+    width: 1239px;
     background-color: yellow;
 }
 
-#container3 {
+.container3 {
     display: flex;
     align-items: flex-end;
-    height: 40%;
-    width: 100%;
+    height: 280px;
+    width: 1239px;
     background-color: maroon;
 }
 
-#longFloor {
+.floorLong {
     background-color: black;
-    height: 35%;
+    height: 80px;
     width: 160px;
     bottom: 0;
     float: left;
@@ -42,97 +50,97 @@
     font-size: .8em;
 }
 
-#longFloorWall {
+.floorLongWall {
   background-color: red;
-    height: 35%;
+    height: 80px;
     width: 1px;
     bottom: 0;
     float: left;
 }
 
-#floor {
+.floor {
     background-color: black;
-    height: 35%;
+    height: 80px;
     width: 130px;
     bottom: 0px;
     float: left;
 }
 
-#floorWall {
+.floorWall {
     background-color: red;
-    height: 35%;
+    height: 80px;
     width: 1px;
     bottom: 0px;
     float: left;
 }
 
-#shortFloor {
+.floorShort {
     background-color: black;
-    height: 35%;
+    height: 80px;
     width: 90px;
     bottom: 0px;
     float: left;
 }
 
-#shortFloorWall {
+.floorShortWall {
     background-color: red;
-    height: 35%;
+    height: 80px;
     width: 1px;
     bottom: 0px;
     float: left;
 }
 
-#shortFloor3 {
+.floor3Short {
     background-color: black;
-    height: 35%;
+    height: 80px;
     width: 60px;
     bottom: 0px;
     float: left;
 }
 
-#shortFloor3Wall {
+.floor3ShortWall {
     background-color: red;
-    height: 35%;
+    height: 80px;
     width: 1px;
     bottom: 0px;
     float: left;
 }
 
-#hole {
+.hole {
     background-color: red;
-    height: 15%;
+    height: 40px;
     width: 50px;
     bottom: 0px;
     float: left;
 }
 
-#longHole {
+.holeLong {
     background-color: red;
-    height: 15%;
+    height: 40px;
     width: 100px;
     bottom: 0px;
     float: left;
 }
 
-#pillar1 {
+.pillar1 {
     background-color: darkgrey;
-    height: 50%;
+    height: 115px;
     width: 50px;
     bottom: 0px;
     float: left;
 }
 
-#pillar1Wall {
+.pillar1Wall {
     background-color: red;
-    height: 50%;
+    height: 115px;
     width: 1px;
     bottom: 0px;
     float: left;
 }
 
-#longPillar1 {
+.pillar1Long {
     background-color: darkgrey;
-    height: 50%;
+    height: 115px;
     width: 130px;
     bottom: 0px;
     float: left;
@@ -141,50 +149,50 @@
     color: white;
 }
 
-#longPillar1Wall {
+.pillar1LongWall {
     background-color: red;
-    height: 50%;
+    height: 115px;
     width: 1px;
     bottom: 0px;
     float: left;
 }
 
-#pillar2 {
+.pillar2 {
     background-color: grey;
-    height: 65%;
+    height: 160px;
     width: 65px;
     bottom: 0px;
     float: left;
 }
 
-#pillar2Wall {
+.pillar2Wall {
     background-color: red;
-    height: 65%;
+    height: 160px;
     width: 1px;
     bottom: 0px;
     float: left;
 }
 
-#pillar3 {
+.pillar3 {
     background-color: lightgrey;
-    height: 80%;
+    height: 205px;
     width: 45px;
     bottom: 0px;
     float: left;
 }
 
-#pillar3Wall {
+.pillar3Wall {
     background-color: red;
-    height: 80%;
+    height: 205px;
     width: 1px;
     bottom: 0px;
     float: left;
 }
 
-#winZone {
+.winZone {
     background-color: green;
-    height: 30%;
-    width: 101px;
+    height: 120px;
+    width: 100px;
     bottom: 0px;
     float: left;
     text-align: center;
@@ -207,13 +215,13 @@ h3 {
     color: white;
 }
 
-#player {
+.player {
     position: absolute;
     height: 20px;
     width: 20px;
     background-color: blue;
-    top: 17.8%;
-    left: 1%;
+    top: 75px;
+    left: 0px;
     z-index: 1;
 }
 
