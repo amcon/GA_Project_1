@@ -2,6 +2,8 @@ $(function(){
 
 // create variables in global scope
 
+class Ground
+
 var $player = $(".player");
 var $screen = $("body");
 var $container1 = $(".container1");
@@ -14,7 +16,7 @@ var $pillar1 = $(".pillar1");
 var $pillar2 = $(".pillar2");
 var $pillar3 = $(".pillar3");
 
-var xAxis = 2;
+var xAxis = 1;
 var yAxis = 1;
 
 var $wall = $(".wall");
@@ -28,71 +30,151 @@ var falling = true;
 
 //  create a function for the player to move left and right when page loads and changes direction based on the screen width
 
-          function movePlayer(){
+          function moveAndFall(){
 
           var xPosition = parseInt($player.css("left"));
+          var yPosition = parseInt($player.css("top"));
+
           var screenWidth = parseInt($screen.width());
           var playerWidth = parseInt($player.width());
+          var playerWidth = parseInt($player.width());
+          var floorWidth = parseInt($floor.width());
+          var holeWidth = parseInt($hole.width());
+          var pillar1Width = parseInt($pillar1.width());
 
-          if (xPosition > (screenWidth - playerWidth) || xPosition < (screenWidth - screenWidth)){
-          xAxis = -xAxis;
-          }
+          var container1Height = parseInt($container1.height());
+          var playerHeight = parseInt($player.height());
+          var floorHeight = parseInt($floor.height());
+          var holeHeight = parseInt($hole.height());
+          var pillar1Height = parseInt($pillar1.height());
 
-          var pxValue = xPosition + xAxis + "px";
-          $player.css("left", pxValue);
+          var moving = true;
+
+
+
+          switch (moving) {
+                case ( xPosition > screenWidth || xPosition < (screenWidth - screenWidth) ): {
+                  xAxis = -xAxis;
+                } break;
+
+                case ( 0 < xPosition <= (floorWidth + playerWidth) && 0 < yPosition <= container1Height - (floorHeight + playerHeight)): {
+                  xAxis = 2;
+                  yAxis = 1;
+                      if ( yPosition >= container1Height - (floorHeight + playerHeight) ) {
+                      yAxis = 0;
+                      }
+                      // if (xPosition > (floorWidth - playerWidth)) {
+                      //   yAxis = 1;
+                      // }
+                      // if (xPosition > (floorWidth - playerWidth) + holeWidth) {
+                      //   yAxis = 0;
+                      // }
+                } break;
+
+                // case ( xPosition > (floorWidth - playerWidth) ): {
+                //   yAxis = 1;
+                // } break;
+          };
+
+              var pxValue = xPosition + xAxis + "px";
+              $player.css("left", pxValue);
       //  console.log(xPosition);
-
-          }
-//------------------------------------------------------------------------//
-
-//  create a function for the player to always be falling -- unless he is hitting the y-axis of a div top
-
-         function fall(){
-
-              var xPosition = parseInt($player.css("left"));
-              var yPosition = parseInt($player.css("top"));
-
-              var container1Height = parseInt($container1.height());
-              var playerHeight = parseInt($player.height());
-              var playerWidth = parseInt($player.width());
-              var floorHeight = parseInt($floor.height());
-              var floorWidth = parseInt($floor.width());
-              var holeHeight = parseInt($hole.height());
-              var holeWidth = parseInt($hole.width());
-              var pillar1Height = parseInt($pillar1.height());
-              var pillar1Width = parseInt($pillar1.width());
-
-
-              // if he falls into a div floor top, quit the fall funtion, but move forward
-              // else, keep falling
-              if (0 < xPosition <= (floorWidth - playerWidth)) {
-                    yAxis = 1;
-                    if (yPosition >= container1Height - (floorHeight + playerHeight)) {
-                          // clearInterval(intFall);
-                          yAxis = 0;
-                          // var falling = false;
-                          } else if (yPosition < container1Height - (floorHeight + playerHeight)) {
-                            yAxis = 1;
-                          } else {
-                            yAxis = 1;
-                          };
-              } else if (floorWidth < xPosition >= (floorWidth + (holeWidth - playerWidth))) {
-                    yAxis = 1;
-                    if (yPosition >= container1Height - (holeHeight + playerHeight));
-                          yAxis = 0;
-                          // clearInterval(intMove);
-                          // alert("You LOSE!");
-                          } else {
-                            yAxis = 1;
-                          };
-
-
 
               var pxValue = yPosition + yAxis + "px";
               $player.css("top", pxValue);
               console.log(yPosition);
+              console.log(xPosition);
+
           }
 
+
+
+//------------------------------------------------------------------------//
+
+// function floorDivs () {
+
+//           var xPosition = parseInt($player.css("left"));
+//           var yPosition = parseInt($player.css("top"));
+
+//           var screenWidth = parseInt($screen.width());
+//           var playerWidth = parseInt($player.width());
+//           var playerWidth = parseInt($player.width());
+//           var floorWidth = parseInt($floor.width());
+//           var holeWidth = parseInt($hole.width());
+//           var pillar1Width = parseInt($pillar1.width());
+
+//           var container1Height = parseInt($container1.height());
+//           var playerHeight = parseInt($player.height());
+//           var floorHeight = parseInt($floor.height());
+//           var holeHeight = parseInt($hole.height());
+//           var pillar1Height = parseInt($pillar1.height());
+
+
+//                   if ( 0 < xPosition <= (floorWidth + playerWidth) && 0 < yPosition <= container1Height - (floorHeight + playerHeight) ) {
+//                   xAxis = 1;
+//                   yAxis = 1;
+//                       if ( yPosition >= container1Height - (floorHeight + playerHeight) ) {
+//                       yAxis = 0;
+//                       }
+//                  }
+
+//               var pxValue = xPosition + xAxis + "px";
+//               $player.css("left", pxValue);
+
+//               var pxValue = yPosition + yAxis + "px";
+//               $player.css("top", pxValue);
+//               console.log(yPosition);
+//               console.log(xPosition);
+// }
+
+//------------------------------------------------------------------------//
+
+//  create a function for the player to always be falling -- unless he is hitting the y-axis of a div top
+
+
+         // function fall(){
+
+         //      var xPosition = parseInt($player.css("left"));
+
+
+
+         //      var falling = true;
+
+
+         //      // if he falls into a div floor top, quit the fall funtion, but move forward
+         //      // else, keep falling
+         //      switch (falling) {
+         //          case (  ): {
+         //                        console.log('bigger than 0, less that DIV width');
+         //                        yAxis = 1;
+         //                         if ()) {
+         //                          yAxis = 0;
+         //                        }
+         //                        //  if () {
+         //                        //   yAxis = 1;
+         //                        // }
+         //                        break;
+         //                      };
+
+
+         //          // case ( xPosition > (floorWidth - playerWidth) ): {
+         //          //               console.log('bigger that 1st div width');
+         //          //               yAxis = 1;
+         //          //               // if (yPosition >= container1Height - (holeHeight + playerHeight)) {
+         //          //               // yAxis = 0;
+         //          //               // clearInterval(intMove);
+         //          //               // clearInterval(intFall);
+         //          //               // alert("You LOSE!");
+         //          //               // };
+         //          //               break;
+         //          //             }
+
+         //          // case 3:
+         //      } // continue to write else if statements until I die...
+
+
+
+         //  }
 
 
 //----------------------------------------------------------------------//
@@ -137,7 +219,7 @@ var falling = true;
 //  create a funtion that jumps when you hit the spacebar
 
           function jump(){
-                  $player.animate({top: 80}, 400);
+                  $player.animate({top: 70}, 200);
                   // $player.css("margin-top", "-40px");
                       };
 
@@ -158,10 +240,12 @@ var falling = true;
 
 //----------------------------------------------------------------------//
 
+
+
 // Call Functions:
 
 var intMove = setInterval(function() {
-    movePlayer();
+    moveAndFall();
     }, 15);
 
 // var intId = setInterval(function() {
@@ -176,9 +260,9 @@ $(document).keydown(function(e){
     }
    })
 
-var intFall = setInterval(function(){
-  fall();
-}, 25);
+// var intFall = setInterval(function(){
+//   floorDivs();
+// }, 15);
 
 
 
