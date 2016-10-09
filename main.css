@@ -2,15 +2,19 @@ body {
     height: 700px;
     width: 1219px;
     margin: 0 auto;
-    background-color: black;
+    background-image: url("./trees.png");
+    background-position: center;
     display: cover;
+
 }
 
 header {
-    height: 200px;
+    height: 210px;
     width: 1219px;
     margin: 0 auto;
-    background-color: lightblue;
+    background-image: url("./Pokemon_logo.png");
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
 
@@ -29,7 +33,9 @@ header {
     align-items: flex-end;
     height: 300px;
     width: 1219px;
-    background-color: lightblue;
+    background-image: url("sky.jpeg");
+    background-size: cover;
+    background-position: center;
 }
 
 /*.container2 {
@@ -161,7 +167,7 @@ header {
 }
 
 .pillar1Long {
-    background-image: url("./poke_page.png");
+    background-image: url("./floor.png");
     background-size: cover;
     background-position: center;
     border-radius: .5em;
@@ -184,12 +190,12 @@ header {
 }
 
 .pillar2 {
-    background-image: url("./pillar.png");
+    background-image: url("./floor.png");
     background-size: cover;
     background-position: center;
-    border-radius: .5em;
+    border-radius: .3em;
     height: 160px;
-    width: 65px;
+    width: 80px;
     bottom: 0px;
     float: left;
 }
@@ -204,7 +210,10 @@ header {
 }
 
 .pillar3 {
-    background-color: lightgrey;
+    background-image: url("./floor.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: .3em;
     height: 205px;
     width: 45px;
     bottom: 0px;
@@ -221,7 +230,10 @@ header {
 }
 
 .dangerZone {
-  background-color: purple;
+  background-image: url("./rocks.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: .3em;
   height: 60px;
   width: 30px;
   bottom: 0px;
@@ -238,7 +250,7 @@ header {
 .winZone {
     background-color: green;
     height: 300px;
-    width: 12px;
+    width: 1px;
     bottom: 0px;
     float: left;
     text-align: center;
@@ -247,8 +259,11 @@ header {
 }
 
 h1{
-    margin: 0 auto;
+    margin-top: 130px;
     text-align: center;
+    font-family: 'Freckle Face', cursive;
+    color: black;
+    font-size: 4em;
 }
 
 h2 {
