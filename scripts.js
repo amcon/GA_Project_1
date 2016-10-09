@@ -2,29 +2,24 @@ $(function(){
 
 // create variables in global scope
 
-class Ground
 
 var $player = $(".player");
 var $screen = $("body");
 var $container1 = $(".container1");
-var $container2 = $(".container2");
-var $container3 = $(".container3");
 
-var $floor = $(".floorLong");
+var $floorLong = $(".floorLong");
+var $floor = $(".floor");
 var $hole = $(".hole");
-var $pillar1 = $(".pillar1");
+var $pillar1 = $(".pillar1Long");
 var $pillar2 = $(".pillar2");
 var $pillar3 = $(".pillar3");
 
-var xAxis = 1;
-var yAxis = 1;
+var xAxis = 2;
+var yAxis = 3;
 
 var $wall = $(".wall");
 
-var interval = null;
-var interval2 = null;
-var counter = 0
-var falling = true;
+
 
 //----------------------------------------------------------------------//
 
@@ -37,13 +32,14 @@ var falling = true;
 
           var screenWidth = parseInt($screen.width());
           var playerWidth = parseInt($player.width());
-          var playerWidth = parseInt($player.width());
+          var floorLongWidth = parseInt($floorLong.width());
           var floorWidth = parseInt($floor.width());
           var holeWidth = parseInt($hole.width());
           var pillar1Width = parseInt($pillar1.width());
 
           var container1Height = parseInt($container1.height());
           var playerHeight = parseInt($player.height());
+          var floorLongHeight = parseInt($floorLong.height());
           var floorHeight = parseInt($floor.height());
           var holeHeight = parseInt($hole.height());
           var pillar1Height = parseInt($pillar1.height());
@@ -53,22 +49,78 @@ var falling = true;
 
 
           switch (moving) {
-                case ( xPosition > screenWidth || xPosition < (screenWidth - screenWidth) ): {
-                  xAxis = -xAxis;
+                case ( xPosition > (screenWidth - playerWidth)): {
+                  xAxis = 0;
+                  yAxis = 0;
+                  // alert("You WON!");
                 } break;
 
-                case ( 0 < xPosition <= (floorWidth + playerWidth) && 0 < yPosition <= container1Height - (floorHeight + playerHeight)): {
+                case ( 0 < xPosition <= (screenWidth - playerWidth)): {
                   xAxis = 2;
-                  yAxis = 1;
-                      if ( yPosition >= container1Height - (floorHeight + playerHeight) ) {
+                  yAxis = 3;
+
+// LONG FLOOR
+                      if ( yPosition >= container1Height - (floorLongHeight + playerHeight) ) {
                       yAxis = 0;
                       }
-                      // if (xPosition > (floorWidth - playerWidth)) {
-                      //   yAxis = 1;
-                      // }
-                      // if (xPosition > (floorWidth - playerWidth) + holeWidth) {
-                      //   yAxis = 0;
-                      // }
+
+// HOLE
+                      if ( xPosition > floorLongWidth ) {
+                        yAxis = 1;
+                             if (yPosition >= container1Height - (holeHeight + playerHeight)) {
+                              yAxis = 0;
+                              }
+                      }
+// LONG FLOOR
+                      if (xPosition > floorLongWidth + holeWidth) {
+                        yAxis = 1;
+                            if (yPosition >= container1Height - (floorLongHeight + playerHeight)) {
+                              yAxis = 0;
+                            }
+                      }
+// PILLAR
+                      if (xPosition > floorLongWidth + holeWidth + floorLongWidth) {
+                        yAxis = 1;
+                            if (yPosition >= container1Height - (pillar1Height + playerHeight)) {
+                              yAxis = 0;
+                            }
+                      }
+// HOLE
+                      if (xPosition > floorLongWidth + holeWidth + floorLongWidth + pillar1Width) {
+                        yAxis = 1;
+                            if (yPosition >= container1Height - (holeHeight + playerHeight)) {
+                              yAxis = 0;
+                            }
+                      }
+// PILLAR
+                      if (xPosition > floorLongWidth + holeWidth + floorLongWidth + pillar1Width + holeWidth) {
+                        yAxis = 1;
+                            if (yPosition >= container1Height - (pillar1Height + playerHeight)) {
+                              yAxis = 0;
+                            }
+                      }
+// FLOOR
+                      if (xPosition > floorLongWidth + holeWidth + floorLongWidth + pillar1Width + holeWidth + pillar1Width) {
+                        yAxis = 1;
+                            if (yPosition >= container1Height - (floorHeight + playerHeight)) {
+                              yAxis = 0;
+                            }
+                      }
+// HOLE
+                      if (xPosition > floorLongWidth + holeWidth + floorLongWidth + pillar1Width + holeWidth + pillar1Width + floorWidth) {
+                        yAxis = 1;
+                            if (yPosition >= container1Height - (holeHeight + playerHeight)) {
+                              yAxis = 0;
+                            }
+                      }
+// FLOOR
+                       if (xPosition > floorLongWidth + holeWidth + floorLongWidth + pillar1Width + holeWidth + pillar1Width + floorWidth + holeWidth) {
+                        yAxis = 1;
+                            if (yPosition >= container1Height - (floorHeight + playerHeight)) {
+                              yAxis = 0;
+                            }
+                      }
+
                 } break;
 
                 // case ( xPosition > (floorWidth - playerWidth) ): {
@@ -82,8 +134,8 @@ var falling = true;
 
               var pxValue = yPosition + yAxis + "px";
               $player.css("top", pxValue);
-              console.log(yPosition);
-              console.log(xPosition);
+              // console.log(yPosition);
+              // console.log(xPosition);
 
           }
 
@@ -219,7 +271,7 @@ var falling = true;
 //  create a funtion that jumps when you hit the spacebar
 
           function jump(){
-                  $player.animate({top: 70}, 200);
+                  $player.animate({top: 130}, 200);
                   // $player.css("margin-top", "-40px");
                       };
 
