@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("./home_body.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+img {
+    height: 20vh;
+    width: 30%;
+    margin-top: 5%;
+}
+
+h1 {
+    font-family: 'Freckle Face', cursive;
+    font-size: 7em;
+    height: 10vh;
+    margin-top: 0%;
+}
+
+button {
+    height: 10vh;
+}
+
+.one {
+    width: 30%;
+}
+
+.two {
+    width: 40%;
+}
+
+.three {
+    width: 50%;
+}
