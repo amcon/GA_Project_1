@@ -3,13 +3,14 @@ body {
     width: 1219px;
     margin: 0 auto;
     background-color: black;
+    display: cover;
 }
 
 header {
     height: 200px;
     width: 1219px;
     margin: 0 auto;
-    background-color: red;
+    background-color: lightblue;
     display: flex;
     justify-content: center;
 
@@ -49,7 +50,10 @@ header {
 }*/
 
 .floorLong {
-    background-color: black;
+    background-image: url("./floor.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: .5em;
     height: 80px;
     width: 120px;
     bottom: 0;
@@ -60,7 +64,8 @@ header {
 }
 
 .floorLongWall {
-  background-color: red;
+    background-color: red;
+    opacity: 0;
     height: 80px;
     width: 1px;
     bottom: 0;
@@ -68,7 +73,10 @@ header {
 }
 
 .floor {
-    background-color: black;
+    background-image: url("./floor.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: .5em;
     height: 80px;
     width: 70px;
     bottom: 0px;
@@ -77,6 +85,7 @@ header {
 
 .floorWall {
     background-color: red;
+    opacity: 0;
     height: 80px;
     width: 1px;
     bottom: 0px;
@@ -109,6 +118,7 @@ header {
 
 .floor3ShortWall {
     background-color: red;
+    opacity: 0;
     height: 80px;
     width: 1px;
     bottom: 0px;
@@ -116,7 +126,7 @@ header {
 }
 
 .hole {
-    background-color: red;
+    background-image: url("./lava.jpg");
     height: 40px;
     width: 50px;
     bottom: 0px;
@@ -132,7 +142,9 @@ header {
 }
 
 .pillar1 {
-    background-color: darkgrey;
+    background-image: url("./poke_page.png");
+    background-size: cover;
+    background-position: center;
     height: 115px;
     width: 50px;
     bottom: 0px;
@@ -141,6 +153,7 @@ header {
 
 .pillar1Wall {
     background-color: red;
+    opacity: 0;
     height: 115px;
     width: 1px;
     bottom: 0px;
@@ -148,7 +161,10 @@ header {
 }
 
 .pillar1Long {
-    background-color: darkgrey;
+    background-image: url("./poke_page.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: .5em;
     height: 115px;
     width: 100px;
     bottom: 0px;
@@ -160,6 +176,7 @@ header {
 
 .pillar1LongWall {
     background-color: red;
+    opacity: 0;
     height: 115px;
     width: 1px;
     bottom: 0px;
@@ -167,7 +184,10 @@ header {
 }
 
 .pillar2 {
-    background-color: grey;
+    background-image: url("./pillar.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: .5em;
     height: 160px;
     width: 65px;
     bottom: 0px;
@@ -176,6 +196,7 @@ header {
 
 .pillar2Wall {
     background-color: red;
+    opacity: 0;
     height: 160px;
     width: 1px;
     bottom: 0px;
@@ -192,6 +213,7 @@ header {
 
 .pillar3Wall {
     background-color: red;
+    opacity: 0;
     height: 205px;
     width: 1px;
     bottom: 0px;
@@ -208,6 +230,7 @@ header {
 
 .dangerZoneWall {
   background-color: red;
+  opacity: 0;
   height: 60px;
   width: 1px;
 }
@@ -240,12 +263,17 @@ h3 {
 
 .player {
     position: absolute;
-    height: 20px;
-    width: 20px;
-    background-color: blue;
+    height: 40px;
+    width: 40px;
     top: 380px;
     left: 0px;
     z-index: 1;
+}
+
+img {
+  display: block;
+  height: 40px;
+  width: 40px;
 }
 
 button {

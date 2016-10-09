@@ -60,7 +60,7 @@ var $wall = $(".wall");
                 case ( xPosition > (screenWidth - playerWidth)): {
                   xAxis = 0;
                   yAxis = 0;
-                  console.log ("You WON!");
+                  alert ("You WON!");
                   clearInterval(intMove);
 
                 } break;
@@ -79,7 +79,7 @@ var $wall = $(".wall");
                         yAxis = 5;
                              if (yPosition >= container1Height - (holeHeight + playerHeight)) {
                               yAxis = 0;
-                              console.log("You Lose!");
+                              alert("You Lose, BITCH!");
                               clearInterval(intMove);
                               }
                       }
@@ -91,108 +91,104 @@ var $wall = $(".wall");
                             }
                       }
 // PILLAR
-                      if (xPosition > floorLongWidth + holeWidth + floorLongWidth) {
+                      if ( xPosition > (floorLongWidth * 2) + holeWidth ) {
                         yAxis = 5;
                             if (yPosition >= container1Height - (pillar1Height + playerHeight)) {
                               yAxis = 0;
                             }
                       }
 // HOLE
-                      if (xPosition > floorLongWidth + holeWidth + floorLongWidth + pillar1Width) {
+                      if (xPosition > (floorLongWidth * 2) + holeWidth + pillar1Width) {
                         yAxis = 5;
                             if (yPosition >= container1Height - (holeHeight + playerHeight)) {
                               yAxis = 0;
-                              console.log("You Lose!");
+                              alert("You Lose, BITCH!");
                               clearInterval(intMove);
                             }
                       }
 // PILLAR
-                      if (xPosition > floorLongWidth + holeWidth + floorLongWidth + pillar1Width + holeWidth) {
+                      if (xPosition > (floorLongWidth * 2) + (holeWidth * 2) + pillar1Width) {
                         yAxis = 5;
                             if (yPosition >= container1Height - (pillar1Height + playerHeight)) {
                               yAxis = 0;
                             }
                       }
 // FLOOR
-                      if (xPosition > floorLongWidth + holeWidth + floorLongWidth + pillar1Width + holeWidth + pillar1Width) {
+                      if (xPosition > (floorLongWidth * 2) + (holeWidth * 2) + (pillar1Width * 2)) {
                         yAxis = 5;
                             if (yPosition >= container1Height - (floorHeight + playerHeight)) {
                               yAxis = 0;
                             }
                       }
 // HOLE
-                      if (xPosition > floorLongWidth + holeWidth + floorLongWidth + pillar1Width + holeWidth + pillar1Width + floorWidth) {
+                      if (xPosition > (floorLongWidth * 2) + (holeWidth * 2) + (pillar1Width * 2) + floorWidth) {
                         yAxis = 5;
                             if (yPosition >= container1Height - (holeHeight + playerHeight)) {
                               yAxis = 0;
-                              console.log("You Lose!");
+                              alert("You Lose, BITCH!");
                               clearInterval(intMove);
                             }
                       }
 // FLOOR
-                       if (xPosition > floorLongWidth + holeWidth + floorLongWidth + pillar1Width + holeWidth + pillar1Width + floorWidth
-                        + holeWidth) {
+                       if (xPosition > (floorLongWidth * 2) + (holeWidth * 3) + (pillar1Width * 2) + floorWidth) {
                         yAxis = 5;
                             if (yPosition >= container1Height - (floorHeight + playerHeight)) {
                               yAxis = 0;
                             }
                       }
 // PILLAR
-                        if (xPosition > floorLongWidth + holeWidth + floorLongWidth + pillar1Width + holeWidth + pillar1Width + floorWidth
-                          + holeWidth + floorWidth) {
+                        if (xPosition > (floorLongWidth * 2) + (holeWidth * 3) + (pillar1Width * 2) + (floorWidth * 2)) {
                         yAxis = 5;
                             if (yPosition >= container1Height - (pillar1Height + playerHeight)) {
                               yAxis = 0;
                             }
                       }
 // PILLAR 2
-                       if (xPosition > floorLongWidth + holeWidth + floorLongWidth + pillar1Width + holeWidth + pillar1Width + floorWidth
-                        + holeWidth + floorWidth + pillar1Width) {
+                       if (xPosition > (floorLongWidth * 2) + (holeWidth * 3) + (pillar1Width * 3) + (floorWidth * 2)) {
                         yAxis = 5;
                             if (yPosition >= container1Height - (pillar2Height + playerHeight)) {
                               yAxis = 0;
                             }
                       }
 // PILLAR 3
-                         if (xPosition > floorLongWidth + holeWidth + floorLongWidth + pillar1Width + holeWidth + pillar1Width + floorWidth
-                        + holeWidth + floorWidth + pillar1Width + pillar2Width) {
+                         if (xPosition > (floorLongWidth * 2) + (holeWidth * 3) + (pillar1Width * 3) + (floorWidth * 2) + pillar2Width) {
                         yAxis = 5;
                             if (yPosition >= container1Height - (pillar3Height + playerHeight)) {
                               yAxis = 0;
                             }
                       }
 // HOLE X2
-                        if (xPosition > floorLongWidth + holeWidth + floorLongWidth + pillar1Width + holeWidth + pillar1Width + floorWidth
-                        + holeWidth + floorWidth + pillar1Width + pillar2Width + pillar3Wdith) {
+                        if (xPosition > (floorLongWidth * 2) + (holeWidth * 3) + (pillar1Width * 3) + (floorWidth * 2)
+                         + pillar2Width + pillar3Wdith) {
                         yAxis = 5;
                             if (yPosition >= container1Height - (holeHeight + playerHeight)) {
                               yAxis = 0;
-                              console.log("You Lose!");
+                              alert("You Lose, BITCH!");
                               clearInterval(intMove);
                               //
                             }
                       }
 // DANGER ZONE
-                       if (xPosition > floorLongWidth + holeWidth + floorLongWidth + pillar1Width + holeWidth + pillar1Width + floorWidth
-                        + holeWidth + floorWidth + pillar1Width + pillar2Width + pillar3Wdith + (holeWidth * 2)) {
+                       if (xPosition > (floorLongWidth * 2) + (holeWidth * 5) + (pillar1Width * 3) + (floorWidth * 2)
+                        + pillar2Width + pillar3Wdith) {
                         yAxis = 5;
                             if (yPosition >= container1Height - (dangerZoneHeight + playerHeight)) {
                               yAxis = 0;
                             }
                       }
 //HOLE X2
-                        if (xPosition > floorLongWidth + holeWidth + floorLongWidth + pillar1Width + holeWidth + pillar1Width + floorWidth
-                        + holeWidth + floorWidth + pillar1Width + pillar2Width + pillar3Wdith + (holeWidth * 2) + dangerZoneWidth) {
+                        if (xPosition > (floorLongWidth * 2) + (holeWidth * 5) + (pillar1Width * 3) + (floorWidth * 2)
+                        + pillar2Width + pillar3Wdith + dangerZoneWidth) {
                         yAxis = 5;
                             if (yPosition >= container1Height - (holeHeight + playerHeight)) {
                               yAxis = 0;
-                              console.log("You Lose!");
+                              alert("You Lose, BITCH!");
                               clearInterval(intMove);
                             }
                       }
 // DANGER ZONE
-                         if (xPosition > floorLongWidth + holeWidth + floorLongWidth + pillar1Width + holeWidth + pillar1Width + floorWidth
-                        + holeWidth + floorWidth + pillar1Width + pillar2Width + pillar3Wdith + (holeWidth * 4) + dangerZoneWidth) {
+                         if (xPosition > (floorLongWidth * 2) + (holeWidth * 7) + (pillar1Width * 3) + (floorWidth * 2)
+                        + pillar2Width + pillar3Wdith + dangerZoneWidth) {
                         yAxis = 5;
                             if (yPosition >= container1Height - (dangerZoneHeight + playerHeight)) {
                               yAxis = 0;
@@ -201,15 +197,12 @@ var $wall = $(".wall");
 
                 } break;
 
-                // case ( xPosition > (floorWidth - playerWidth) ): {
-                //   yAxis = 1;
-                // } break;
           };
-
+     // function for right movement
               var pxValue = xPosition + xAxis + "px";
               $player.css("left", pxValue);
-      //  console.log(xPosition);
 
+     // function for left movement
               var pxValue = yPosition + yAxis + "px";
               $player.css("top", pxValue);
               // console.log(yPosition);
@@ -231,7 +224,7 @@ var $wall = $(".wall");
           // console.log(wallPosition);
 
           // if (xPosition = the height and width of the wall elements) {
-          // alert("YOU LOSE!");
+          // alert("You Lose, BITCH!");
 
           // clearInterval(intMove);
           //     }
@@ -242,7 +235,7 @@ var $wall = $(".wall");
 
 // create an alert/button/header that has a link to reload the page when the player loses
 
-          // function reload(){
+          // function reloadHeader(){
 
           // }
 
@@ -260,21 +253,17 @@ var $wall = $(".wall");
 //  create a funtion that jumps when you hit the spacebar
 
           function jump(){
-                  $player.animate({top: 260}, 200);
-                  // $player.css("margin-top", "-40px");
+                  $player.animate({top: 200}, 200);
+                  // $player.css("margin-top", "-=40px");
                       };
 
 
 
 //----------------------------------------------------------------------//
 
-//  create a function for when the player hits the winZone that alerts that he won/reloads the page.
+//  create a function for when the player wins & is alerted that he won to reloads the page.
 
-          // function homeSafe(){
-
-            //if (you touch winZone){
-            //   alert("YOU WIN!")
-            // }
+          // function reloadPage(){
 
 
           // }
@@ -287,11 +276,8 @@ var $wall = $(".wall");
 
 var intMove = setInterval(function() {
     moveAndFall();
-    }, 85);
+    }, 25);
 
-// var intId = setInterval(function() {
-//     hitWall();
-//     }, 40);
 
 $(document).keydown(function(e){
     switch (e.which) {
@@ -301,9 +287,6 @@ $(document).keydown(function(e){
     }
    })
 
-// var intFall = setInterval(function(){
-//   floorDivs();
-// }, 15);
 
 
 
