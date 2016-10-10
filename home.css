@@ -1,4 +1,4 @@
-body {
+.cover {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -8,31 +8,76 @@ body {
     height: 100vh;
 }
 
-img {
-    height: 20vh;
-    width: 30%;
+.logo {
+    height: 30vh;
+    width: 40%;
     margin-top: 5%;
 }
 
 h1 {
-    font-family: 'Freckle Face', cursive;
-    font-size: 7em;
+    font-family: 'Press Start 2P', cursive;
+    color: #02183a;
+    font-size: 4em;
     height: 10vh;
     margin-top: 0%;
+    margin-left: 2%;
+}
+
+h2 {
+    margin-top: -35px;
+    font-family: 'Aldrich', sans-serif;
+}
+
+p {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 1em;
+    text-align: center;
+}
+
+h4 {
+    font-family: 'Press Start 2P', cursive;
+    color: #02183a;
+    font-size: 2em;
+    text-align: center;
 }
 
 button {
-    height: 10vh;
+    height: 8vh;
+    border-radius: 3em;
+    margin-top: 2%;
 }
 
 .one {
-    width: 30%;
+    width: 25%;
+    height: 7vh;
 }
 
 .two {
-    width: 40%;
+    width: 27%;
+    height: 7vh;
 }
 
 .three {
+    width: 30%;
+    height: 7vh;
+}
+
+.instructions {
+    z-index: -1;
+    position: absolute;
+    height: 45vh;
     width: 50%;
+    top: 38%;
+    left: 25%;
+    background-color: lightgreen;
+    border: dotted #2a59b0 10px;
+}
+
+.form {
+    text-align: center;
+    margin-top: -35px;
+    margin-bottom: 25px;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 1.5em;
+
 }

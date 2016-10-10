@@ -18,6 +18,7 @@ header {
     display: flex;
     justify-content: center;
 
+
 }
 
 /*.screen {
@@ -31,7 +32,7 @@ header {
 .container1 {
     display: flex;
     align-items: flex-end;
-    height: 300px;
+    height: 400px;
     width: 1219px;
     background-image: url("sky.jpeg");
     background-size: cover;
@@ -259,15 +260,20 @@ header {
 }
 
 h1{
-    margin-top: 130px;
+    margin-top: 150px;
     text-align: center;
-    font-family: 'Freckle Face', cursive;
-    color: black;
-    font-size: 4em;
+    font-family: 'Press Start 2P', cursive;
+    color: #02183a;
+    font-size: 3em;
 }
 
 h2 {
+    margin: 20px;
+}
+
+h4 {
    margin-top: 25px;
+   font-size: 1em;
 }
 
 h3 {
@@ -299,4 +305,37 @@ button {
   text-align: center;
   font-size: 2.5em;
   font-family: Helvetica;
+}
+
+.lose {
+    position: absolute;
+    z-index: -1;
+    top: 260px;
+    left: 400px;
+    height: 200px;
+    width: 400px;
+    text-align: center;
+    font-family: 'Aldrich', sans-serif;
+    background-color: #dbbf58;
+    border: dotted #2a59b0 10px;
+
+}
+
+.win {
+    position: absolute;
+    z-index: -1;
+    top: 260px;
+    left: 400px;
+    height: 270px;
+    width: 400px;
+    text-align: center;
+    font-family: 'Aldrich', sans-serif;
+    background-color: lightgreen;
+    border: dotted #2a59b0 10px;
+}
+
+.pikachu {
+  margin: 0 auto;
+  height: 80px;
+  width: 80px;
 }

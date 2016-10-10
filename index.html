@@ -3,20 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Pokemon Runner!</title>
+  <title>Pokemon Run!</title>
   <link rel="stylesheet" href="main.css" media="screen" title="no title" charset="utf-8">
   <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js'></script>
   <script type='text/javascript' src='scripts.js'></script>
-  <link href="https://fonts.googleapis.com/css?family=Freckle+Face" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
 </head>
 <header>
-    <h1>RUNNER!</h1>
+
+    <h1>-RUN-</h1>
+
 </header>
 <body>
 
-<!-- <button>- Restart -</button>
- -->
-<!-- <div class=screen> -->
+
+
+      <div class="win" id="redirect">
+          <h2>You won!</h2><h2> Congratulations, you get a starter pokemon: </h2>
+          <img class="pikachu" src="./pikachu.gif">
+          <h2>PIKACHU!</h2>
+      </div>
+
+      <div class="lose" id="redirect">
+              <h2>Sorry... You Lost.<h2>*You don't get any</h2> <h2>Pokemon this round.*</h2> <h2>CLICK to try again!</h2>
+      </div>
 
   <div class="player">
     <img src="Runner.gif">
@@ -25,21 +36,21 @@
     <div class="container1">
 
           <div class=floorLong>
-              <h2>LEVEL 1</h2>
+              <h4>LEVEL 1</h4>
           </div>
           <div class="hole"></div>
-          <div class="floorLongWall" class=wall></div>
+          <div class="floorWall" class=wall></div>
           <div class="floorLong"></div>
-          <div class="pillar1LongWall" class=wall></div>
+          <div class="pillar1Wall" class=wall></div>
           <div class="pillar1Long"></div>
           <div class="hole"></div>
-          <div class="pillar1LongWall" class=wall></div>
+          <div class="pillar1Wall" class=wall></div>
           <div class="pillar1Long"></div>
           <div class="floor"></div>
           <div class="hole"></div>
           <div class="floorWall" class=wall></div>
           <div class="floor"></div>
-          <div class="pillar1LongWall" class=wall></div>
+          <div class="pillar1Wall" class=wall></div>
           <div class="pillar1Long"></div>
           <div class="pillar2Wall"></div>
           <div class="pillar2"></div>
@@ -54,10 +65,6 @@
           <div class="dangerZoneWall"></div>
           <div class="dangerZone"></div>
           <div class="winZone"></div>
-
-
-
-
 
  </div>
 
