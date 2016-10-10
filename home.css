@@ -8,6 +8,12 @@
     height: 100vh;
 }
 
+article {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .logo {
     height: 30vh;
     width: 40%;
@@ -48,17 +54,17 @@ button {
 }
 
 .one {
-    width: 25%;
+    width: 35%;
     height: 7vh;
 }
 
 .two {
-    width: 27%;
+    width: 50%;
     height: 7vh;
 }
 
 .three {
-    width: 30%;
+    width: 55%;
     height: 7vh;
 }
 
@@ -79,5 +85,11 @@ button {
     margin-bottom: 25px;
     font-family: 'Aldrich', sans-serif;
     font-size: 1.5em;
-
 }
+
+input {
+  margin-top: -35px;
+  margin-bottom: 25px;
+  font-family: 'Aldrich', sans-serif;
+}
+

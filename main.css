@@ -282,6 +282,12 @@ h3 {
     color: white;
 }
 
+p {
+    font-size: 1em;
+    font-family: 'Aldrich', sans-serif;
+    text-align: center;
+}
+
 .player {
     position: absolute;
     height: 40px;
@@ -318,14 +324,13 @@ button {
     font-family: 'Aldrich', sans-serif;
     background-color: #dbbf58;
     border: dotted #2a59b0 10px;
-
 }
 
 .win {
     position: absolute;
     z-index: -1;
     top: 260px;
-    left: 400px;
+    left: 410px;
     height: 270px;
     width: 400px;
     text-align: center;
@@ -338,4 +343,57 @@ button {
   margin: 0 auto;
   height: 80px;
   width: 80px;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#usernameBox {
+    height: 50px;
+    width: 200px;
+    background-color: #5cc0f2;
+    border: solid #2a59b0 10px;
+    margin-top: 10px;
+    font-size: 1em;
+    font-family: 'Aldrich', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 850px){
+
+body {
+    height: 700px;
+    width: 850px;
+}
+
+header {
+    height: 210px;
+    width: 850px;
+}
+
+.container1 {
+    height: 400px;
+    width: 850px;
+}
+
+
+.lose {
+    top: 260px;
+    left: 200px;
+    height: 200px;
+    width: 400px;
+}
+
+.win {
+    top: 260px;
+    left: 205px;
+    height: 270px;
+    width: 400px;
+}
+
+
 }

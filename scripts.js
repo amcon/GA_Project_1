@@ -32,7 +32,10 @@ var x = NaN;
 
 var $wall = $(".wall");
 
-
+var $data = window.location.search;
+$data = $data.split('&');
+var $username = $data[0].split('=');
+var $formData = {};
 
 //----------------------------------------------------------------------//
 
@@ -362,7 +365,7 @@ $(".one").click(function() {
 goToGame();
 });
 
-$(".start").click(function() {
+$(".submit").click(function() {
 goToGame();
 });
 
@@ -377,5 +380,7 @@ $(".homeInstructions").click(function() {
 $homeInstructions.click(function() {
   instructionsOff();
 })
+
+$("#usernameBox").html("USERNAME:" + $formData["userName"]);
 
 })
