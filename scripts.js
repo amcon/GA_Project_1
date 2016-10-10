@@ -321,7 +321,7 @@ var $formData = {};
 // create a function that directs the home page to the index.html when clicked.
 
           function goToGame() {
-                  window.location.href = "./index.html";
+                  window.location.href = "./game.html";
           }
 
 //----------------------------------------------------------------------//
