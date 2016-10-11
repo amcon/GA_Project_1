@@ -14,6 +14,12 @@ article {
     flex-direction: column;
 }
 
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .logo {
     height: 30vh;
     width: 40%;
