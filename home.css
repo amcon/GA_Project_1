@@ -67,6 +67,7 @@ button {
 .two {
     width: 50%;
     height: 7vh;
+    margin-top: -2%;
 }
 
 .three {
@@ -97,5 +98,15 @@ input {
   margin-top: -35px;
   margin-bottom: 25px;
   font-family: 'Aldrich', sans-serif;
+}
+
+.submit {
+  background-image: url("./orange_button.png");
+  background-position: center;
+  width: 40%;
+  height: 7vh;
+  border-radius: 200px;
+  margin-top: -50px;
+  font-size: 1.5em;
 }
 
