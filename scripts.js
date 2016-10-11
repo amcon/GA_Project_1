@@ -381,6 +381,8 @@ $homeInstructions.click(function() {
   instructionsOff();
 })
 
+//get form data
+
 $("#usernameBox").html("USERNAME:" + $formData["userName"]);
 
 })
