@@ -32,10 +32,9 @@ var x = NaN;
 
 var $wall = $(".wall");
 
-var $data = window.location.search;
-$data = $data.split('&');
-var $username = $data[0].split('=');
-var $formData = {};
+var $data = window.location.search.substring(1);
+var $username = $data.split('=');
+// var $formData =
 
 //----------------------------------------------------------------------//
 
@@ -282,28 +281,11 @@ var $formData = {};
 //----------------------------------------------------------------------//
 
 
-// create an alert/button/header that has a link to reload the page when the player loses
-
-          // function reloadHeader(){
-
-          // }
-
-
-//----------------------------------------------------------------------//
-
-//create a click event to reload the page when the reload button appears
-
-          // function reloadPage(){
-
-          // }
-
-//----------------------------------------------------------------------//
 
 //  create a funtion that jumps when you hit the spacebar
 
           function jump(){
                   $player.animate({top: x}, 200);
-                  // $player.css("top", parseInt($player.css("top")) - 200);
                       };
 
 
@@ -381,6 +363,6 @@ $homeInstructions.click(function() {
   instructionsOff();
 })
 
-$("#usernameBox").html("USERNAME:" + $formData["userName"]);
+$("#usernameBox").html("USERNAME:" + $username[1]);
 
 })
