@@ -38,7 +38,9 @@ var $username = $data.split('=');
 
 //----------------------------------------------------------------------//
 
-//  create a function for the player to move left and right when page loads and changes direction based on the screen width
+// create a function for the player to move left and right when page loads and changes direction based on the screen width
+// chatted with Jimmy, Matt Bedell, and Taka for Left/Right functions. Taka for the separate "if" statements.
+// parameter concept is original (and sloppy af)
 
           function moveAndFall(){
 
@@ -74,7 +76,7 @@ var $username = $data.split('=');
           var jump = false;
 
 
-
+// if the player hits the end of the container, you win.
 
           switch (moving) {
                 case ( xPosition > (screenWidth - playerWidth)): {
@@ -84,6 +86,8 @@ var $username = $data.split('=');
                   clearInterval(intMove);
 
                 } break;
+
+// if the player is inside of the container, move right and fall automatically
 
                 case ( 0 < xPosition <= (screenWidth - playerWidth)): {
                   xAxis = 2;
@@ -106,7 +110,6 @@ var $username = $data.split('=');
                               }
                       }
 
-                      // if ((floorLongWidth + holeWidth + floorLongWallWidth) < xPosition < (floorLongWidth + holeWidth) && ))
 
 // LONG FLOOR
                       if (xPosition > floorLongWidth + holeWidth) {
@@ -246,6 +249,7 @@ var $username = $data.split('=');
                 } break;
 
           };
+
      // function for right movement
               var pxValue = xPosition + xAxis + "px";
               $player.css("left", pxValue);
@@ -261,28 +265,9 @@ var $username = $data.split('=');
 
 //----------------------------------------------------------------------//
 
-//create a function that ends the game when the player hits certain divs (bottom of holes and sides of walls)
-
-          // function hitWall(){
-
-          // var xPosition = $player.offset();
-          // var wallPosition = $wall.offset();
-
-          // console.log(xPosition);
-          // console.log(wallPosition);
-
-          // if (xPosition = the height and width of the wall elements) {
-          // alert("You Lose, BITCH!");
-
-          // clearInterval(intMove);
-          //     }
-          // }
-
-//----------------------------------------------------------------------//
-
-
 
 //  create a funtion that jumps when you hit the spacebar
+// using a variable as the value was MMYYYY idea. WOO. It came to me in a dream.
 
           function jump(){
                   $player.animate({top: x}, 200);
@@ -293,6 +278,7 @@ var $username = $data.split('=');
 //----------------------------------------------------------------------//
 
 //  create a function for when the player wins & is alerted that he won to reloads the page.
+// credit to W3schools.com
 
           function reloadPage(){
                   history.go(0);
@@ -301,6 +287,7 @@ var $username = $data.split('=');
 //----------------------------------------------------------------------//
 
 // create a function that directs the home page to the index.html when clicked.
+// credit stackoverflow
 
           function goToGame() {
                   window.location.href = "./game.html";
@@ -309,6 +296,7 @@ var $username = $data.split('=');
 //----------------------------------------------------------------------//
 
 // create a function that makes the instructions pop up on the home page.
+// props to Matt Bedell for the z-index thought
 
             function instructions() {
                   $homeInstructions.css('z-index', '1');
@@ -326,7 +314,7 @@ var intMove = setInterval(function() {
     moveAndFall();
     }, 25);
 
-
+// switch case credit to Taka
 $(document).keydown(function(e) {
     switch (e.which) {
     case (38): // upkey
