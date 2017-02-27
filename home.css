@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 .cover {
     display: flex;
     align-items: center;
@@ -36,8 +40,10 @@ h1 {
 }
 
 h2 {
-    margin-top: -35px;
     font-family: 'Aldrich', sans-serif;
+    font-size: 20px;
+    margin: 0;
+    line-height: 7vh;
 }
 
 p {
@@ -60,19 +66,26 @@ button {
 }
 
 .one {
-    width: 35%;
+    width: 200px;
     height: 7vh;
+    background-image: url("orange_button.png");
+    background-size: 100% 100%;
+    text-align: center;
 }
 
 .two {
-    width: 50%;
+    width: 250px;
     height: 7vh;
-    margin-top: -2%;
+    background-image: url("orange_button.png");
+    background-size: 100% 100%;
+    text-align: center;
 }
 
 .three {
-    width: 55%;
+    width: 300px;
     height: 7vh;
+    background-image: url("orange_button.png");
+    background-size: 100% 100%;
 }
 
 .instructions {
@@ -87,20 +100,35 @@ button {
 }
 
 .form {
-    text-align: center;
-    margin-top: -35px;
-    margin-bottom: 25px;
     font-family: 'Aldrich', sans-serif;
-    font-size: 1.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-input {
-  margin-top: -35px;
-  margin-bottom: 25px;
-  font-family: 'Aldrich', sans-serif;
+.uName {
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+  margin-left: 1%;
 }
 
 .submit {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  font-family: 'Aldrich', sans-serif;
+  font-weight: bold;
+  line-height: 7vh;
+}
+/*input {
+  margin-top: -35px;
+  margin-bottom: 25px;
+  font-family: 'Aldrich', sans-serif;
+}*/
+
+/*.submit {
   background-image: url("./orange_button.png");
   background-position: center;
   width: 40%;
@@ -108,5 +136,5 @@ input {
   border-radius: 200px;
   margin-top: -50px;
   font-size: 1.5em;
-}
+}*/
 

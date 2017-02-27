@@ -1,6 +1,6 @@
 $(function(){
 
-// create variables in global scope
+// create variables
 
 
 var $player = $(".player");
@@ -11,7 +11,6 @@ var $restart = $(".lose");
 var $youWin = $(".win");
 
 var $homeStart = $(".one");
-var $homeInstructions = $(".instructions");
 
 var $floorLong = $(".floorLong");
 var $floor = $(".floor");
@@ -299,11 +298,11 @@ var $username = $data.split('=');
 // props to Matt Bedell for the z-index thought
 
             function instructions() {
-                  $homeInstructions.css('z-index', '1');
+                  $(".instructions").css('z-index', '1');
             }
 
             function instructionsOff() {
-                  $homeInstructions.css('z-index', '-1');
+                  $(".instructions").css('z-index', '-1');
             }
 
 //----------------------------------------------------------------------//
@@ -339,15 +338,12 @@ $(".submit").click(function() {
 goToGame();
 });
 
-$(".three").click(function() {
+
+$(".two").click(function() {
   instructions();
 })
 
-$(".homeInstructions").click(function() {
-  instructions();
-})
-
-$homeInstructions.click(function() {
+$(".instructions").click(function() {
   instructionsOff();
 })
 
